@@ -17,7 +17,7 @@ public class Fraction {
   }
 
   public Fraction plus(Fraction fraction) {
-    return new Fraction(input + fraction.input, fraction.denominator);
+    return new Fraction(input + fraction.input, denominator);
   }
 
   @Override
