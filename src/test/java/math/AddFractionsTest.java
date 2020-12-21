@@ -45,12 +45,12 @@ public class AddFractionsTest {
 
   @Test
   void non_negative_non_zero_operands() {
-    assertEquals(7, new Fraction(3).plus(new Fraction(4)).numerator);
+    assertEquals(new Fraction(7), new Fraction(3).plus(new Fraction(4)));
   }
 
   @Test
   void negative_inputs_and_negative_output() {
-    assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).numerator);
+    assertEquals(new Fraction(-2), new Fraction(-3).plus(new Fraction(1)));
   }
 
   @Test
