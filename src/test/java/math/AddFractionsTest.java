@@ -22,4 +22,10 @@ public class AddFractionsTest {
     Fraction plus = new Fraction(3).plus(new Fraction(4));
     assertEquals(plus, new Fraction(7));
   }
+
+  @Test
+  void negative_input() {
+    Fraction plus = new Fraction(-3).plus(new Fraction(1));
+    assertEquals(plus, new Fraction(-2));
+  }
 }
