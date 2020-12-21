@@ -5,8 +5,8 @@ import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode
 
 public class Fraction {
   public static final int INTEGER_DENOMINATOR = 1;
-  private final int numerator;
-  private final int denominator;
+  public int numerator;
+  public int denominator;
 
   public Fraction(int integerValue) {
     this(integerValue, INTEGER_DENOMINATOR);

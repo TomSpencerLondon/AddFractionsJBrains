@@ -42,4 +42,21 @@ public class AddFractionsTest {
   void whole_number_not_equal_to_different_whole_number() {
     assertNotEquals(new Fraction(6), new Fraction(5));
   }
+
+  @Test
+  void non_negative_non_zero_operands() {
+    assertEquals(7, new Fraction(3).plus(new Fraction(4)).numerator);
+  }
+
+  @Test
+  void negative_inputs_and_negative_output() {
+    assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).numerator);
+  }
+
+  @Test
+  void non_trivial_but_common_denominitator() {
+    Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
+    assertEquals(3, sum.numerator);
+    assertEquals(5, sum.denominator);
+  }
 }
