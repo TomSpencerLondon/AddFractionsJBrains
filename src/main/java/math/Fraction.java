@@ -18,7 +18,19 @@ public class Fraction {
   }
 
   public Fraction plus(Fraction that) {
-    return new Fraction(this.numerator + that.numerator, denominator);
+    int numerator1 = this.numerator;
+    int denominator1 = this.denominator;
+    int numerator2 = that.numerator;
+    int denominator2 = that.denominator;
+
+    if (denominator1 == denominator2){
+      return new Fraction(numerator1 + numerator2, denominator1);
+    }else {
+      int numerator3 = numerator1 * denominator2;
+      int numerator4 = numerator2 * denominator1;
+
+      return new Fraction(numerator3 + numerator4, denominator1 * denominator2);
+    }
   }
 
   @Override
