@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class AddFractionsTest {
   @ParameterizedTest
@@ -25,5 +26,16 @@ public class AddFractionsTest {
   void non_trivial_denominator() {
     Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
     assertEquals(sum, new Fraction(3, 5));
+  }
+
+  @Test
+  void different_numerators() {
+    assertNotEquals(new Fraction(1, 5), new Fraction(2, 5));
+  }
+
+  @Test
+  void different_denominators() {
+    assertNotEquals(new Fraction(3, 4), new Fraction(3, 7));
+
   }
 }
