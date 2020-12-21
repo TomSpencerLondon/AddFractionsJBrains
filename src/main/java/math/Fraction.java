@@ -4,11 +4,12 @@ import static org.apache.commons.lang.builder.EqualsBuilder.reflectionEquals;
 import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode;
 
 public class Fraction {
+  public static final int INTEGER_DENOMINATOR = 1;
   private final int numerator;
   private final int denominator;
 
-  public Fraction(int numerator) {
-    this(numerator, 1);
+  public Fraction(int integerValue) {
+    this(integerValue, INTEGER_DENOMINATOR);
   }
 
   public Fraction(int numerator, int denominator) {
