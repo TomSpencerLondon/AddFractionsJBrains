@@ -56,7 +56,6 @@ public class AddFractionsTest {
   @Test
   void non_trivial_but_common_denominitator() {
     Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
-    assertEquals(3, sum.numerator);
-    assertEquals(5, sum.denominator);
+    assertEquals(new Fraction(3, 5), sum);
   }
 }
