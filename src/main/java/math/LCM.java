@@ -1,7 +1,9 @@
 package math;
 
+import static math.GCD.gcd;
+
 public class LCM {
-  int lcm(int n, int m){
-    return n * m / new GCD().gcd(n, m);
+  static int lcm(int n, int m){
+    return n * m / gcd(n, m);
   }
 }

@@ -63,6 +63,6 @@ public class AddFractionsTest {
   void cross_addition_returns_unreduced_fraction() {
     Fraction sum = new Fraction(1, 2).plus(new Fraction(1, 4));
 
-    assertEquals(new Fraction(6, 8), sum);
+    assertEquals(new Fraction(3, 4), sum);
   }
 }

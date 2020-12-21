@@ -1,5 +1,7 @@
 package math;
 
+import static math.GCD.gcd;
+import static math.LCM.lcm;
 import static org.apache.commons.lang.builder.EqualsBuilder.reflectionEquals;
 import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode;
 
@@ -23,14 +25,12 @@ public class Fraction {
     int numerator2 = that.numerator;
     int denominator2 = that.denominator;
 
-    if (denominator1 == denominator2){
-      return new Fraction(numerator1 + numerator2, denominator1);
-    }else {
-      int numerator3 = numerator1 * denominator2;
-      int numerator4 = numerator2 * denominator1;
+    int gcd = gcd(denominator1, denominator2);
+    int newNumerator1 = numerator1 * (denominator2 / gcd);
+    int newNumerator2 = numerator2 * (denominator1 / gcd);
+    int newDenominator = denominator1 * (denominator2 / gcd);
 
-      return new Fraction(numerator3 + numerator4, denominator1 * denominator2);
-    }
+    return new Fraction(newNumerator1 + newNumerator2, newDenominator);
   }
 
   @Override
