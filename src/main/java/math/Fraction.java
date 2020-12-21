@@ -4,7 +4,7 @@ import static org.apache.commons.lang.builder.EqualsBuilder.reflectionEquals;
 import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode;
 
 public class Fraction {
-  private final int input;
+  private final int numerator;
   private final int denominator;
 
   public Fraction(int numerator) {
@@ -12,12 +12,12 @@ public class Fraction {
   }
 
   public Fraction(int numerator, int denominator) {
-    this.input = numerator;
+    this.numerator = numerator;
     this.denominator = denominator;
   }
 
   public Fraction plus(Fraction fraction) {
-    return new Fraction(input + fraction.input, denominator);
+    return new Fraction(numerator + fraction.numerator, denominator);
   }
 
   @Override
