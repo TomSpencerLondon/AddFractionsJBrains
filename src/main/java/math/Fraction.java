@@ -5,13 +5,19 @@ import static org.apache.commons.lang.builder.HashCodeBuilder.reflectionHashCode
 
 public class Fraction {
   private final int input;
+  private final int denominator;
 
-  public Fraction(int input) {
-    this.input = input;
+  public Fraction(int numerator) {
+    this(numerator, 1);
+  }
+
+  public Fraction(int numerator, int denominator) {
+    this.input = numerator;
+    this.denominator = denominator;
   }
 
   public Fraction plus(Fraction fraction) {
-    return new Fraction(input + fraction.input);
+    return new Fraction(input + fraction.input, fraction.denominator);
   }
 
   @Override

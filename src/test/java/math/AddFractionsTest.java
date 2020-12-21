@@ -1,5 +1,6 @@
 package math;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -18,5 +19,11 @@ public class AddFractionsTest {
         new Fraction(first).plus(new Fraction(second)),
         new Fraction(result)
     );
+  }
+
+  @Test
+  void non_trivial_denominator() {
+    Fraction sum = new Fraction(1, 5).plus(new Fraction(2, 5));
+    assertEquals(sum, new Fraction(3, 5));
   }
 }
