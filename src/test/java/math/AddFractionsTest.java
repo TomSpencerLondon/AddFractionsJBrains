@@ -10,4 +10,10 @@ public class AddFractionsTest {
     Fraction plus = new Fraction(0).plus(new Fraction(0));
     assertEquals(plus, new Fraction(0));
   }
+
+  @Test
+  void zero_plus_non_zero() {
+    Fraction plus = new Fraction(0).plus(new Fraction(5));
+    assertEquals(plus, new Fraction(5));
+  }
 }
