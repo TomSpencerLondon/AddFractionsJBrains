@@ -16,8 +16,8 @@ public class Fraction {
     this.denominator = denominator;
   }
 
-  public Fraction plus(Fraction fraction) {
-    return new Fraction(numerator + fraction.numerator, denominator);
+  public Fraction plus(Fraction that) {
+    return new Fraction(this.numerator + that.numerator, denominator);
   }
 
   @Override
