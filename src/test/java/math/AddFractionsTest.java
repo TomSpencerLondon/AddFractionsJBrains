@@ -36,6 +36,10 @@ public class AddFractionsTest {
   @Test
   void different_denominators() {
     assertNotEquals(new Fraction(3, 4), new Fraction(3, 7));
+  }
 
+  @Test
+  void whole_number_not_equal_to_different_whole_number() {
+    assertNotEquals(new Fraction(6), new Fraction(5));
   }
 }
