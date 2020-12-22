@@ -1,10 +1,5 @@
 package math;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 // steps:
 // 1. Make an array of all numbers from 2 to M
 // 2. find biggest number that must be checked
