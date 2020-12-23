@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static java.util.Arrays.asList;
+import static math.AllPythagoreanTriplets.pythagoreanPrimes;
 import static math.AllPythagoreanTriplets.triplets;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -17,5 +18,15 @@ public class AllPythagoreanTripletsTest {
     result.add(new ArrayList<>(asList(5, 12, 13)));
     result.add(new ArrayList<>(asList(6, 8, 10)));
     assertEquals(result, triplets);
+  }
+
+  @Test
+  void all_pythagorean_primes_below_15() {
+    ArrayList<Integer> primes = pythagoreanPrimes(100);
+
+    ArrayList<Integer> expected = new ArrayList<>(
+        asList(5, 13, 17, 29, 37, 41, 53, 61, 73, 89, 97)
+    );
+    assertEquals(expected, primes);
   }
 }
