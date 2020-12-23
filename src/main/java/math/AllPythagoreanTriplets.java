@@ -21,7 +21,7 @@ public class AllPythagoreanTriplets {
       for (int b = a; b < number; b++) {
         double c = sqrt((a * a) + (b * b));
         if (c < number && (c % 1 == 0)) {
-          List<Integer> list = asList((int) a, (int) b, (int) c);
+          List<Integer> list = asList(a, b, (int) c);
           Collections.sort(list);
           result.add(list);
         }
