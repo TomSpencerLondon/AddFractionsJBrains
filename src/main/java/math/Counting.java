@@ -1,6 +1,7 @@
 package math;
 
 import java.util.HashSet;
+import java.util.List;
 
 import static java.util.Arrays.asList;
 
@@ -15,8 +16,7 @@ public class Counting {
       if (i % 3 == 0 && i % 100 == 23) {
         int firstDigit = i / 1000;
         int secondDigit = i / 100 % 10;
-        HashSet<Integer> digits = new HashSet(asList(firstDigit, secondDigit, THIRD_DIGIT, FOURTH_DIGIT));
-        if (digits.size() == 4){
+        if (new HashSet<>(asList(firstDigit, secondDigit, THIRD_DIGIT, FOURTH_DIGIT)).size() == 4){
           totalCount++;
         }
       }
