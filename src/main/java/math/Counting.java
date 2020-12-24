@@ -3,6 +3,10 @@ package math;
 import java.util.HashSet;
 
 public class Counting {
+
+  public static final int THIRD_DIGIT = 2;
+  public static final int FOURTH_DIGIT = 3;
+
   public static int countNumbers() {
     int totalCount = 0;
     for (int i = 1000; i < 10000; i++) {
@@ -12,7 +16,9 @@ public class Counting {
         HashSet<Integer> digits = new HashSet();
         digits.add(firstDigit);
         digits.add(secondDigit);
-        if (!digits.contains(2) && !digits.contains(3) && digits.size() == 2){
+        digits.add(THIRD_DIGIT);
+        digits.add(FOURTH_DIGIT);
+        if (digits.size() == 4){
           totalCount++;
         }
       }
